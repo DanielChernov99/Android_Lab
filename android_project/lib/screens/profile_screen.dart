@@ -1,58 +1,46 @@
 import 'package:flutter/material.dart';
 
-
-class ProfileApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Profile UI',
-      home: ProfileScreen(),
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-    );
-  }
-}
-
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile'),
+        title: const Text('My Profile'),
         centerTitle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 60,
             backgroundImage: NetworkImage(
               'https://i.pravatar.cc/150?img=14',
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Daniel Chernov And Sasha Belkind',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          Text(
+          const Text(
             'Android Developer',
             style: TextStyle(fontSize: 16, color: Colors.grey),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.message),
-                label: Text('Message'),
+                icon: const Icon(Icons.message),
+                label: const Text('Message'),
               ),
               OutlinedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.call),
-                label: Text('Call'),
+                icon: const Icon(Icons.call),
+                label: const Text('Call'),
               ),
             ],
           ),
