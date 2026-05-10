@@ -1,3 +1,7 @@
+plugins {
+    id("com.google.gms.google-services") version "4.4.1" apply false
+}
+
 allprojects {
     repositories {
         google()
@@ -5,9 +9,7 @@ allprojects {
     }
 }
 
-plugins {
-    id("com.google.gms.google-services") version "4.4.1" apply false
-}
+
 
 val newBuildDir: Directory =
     rootProject.layout.buildDirectory
@@ -27,7 +29,3 @@ tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
 
-dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:34.13.0"))
-    implementation("com.google.firebase:firebase-analytics")
-}
